@@ -8,7 +8,7 @@ sudo dnf -y install maven ant
 sudo dnf -y install java-14-openjdk-devel
 
 # Google Style
-wget https://raw.githubusercontent.com/google/styleguide/gh-pages/intellij-java-google-style.xml
+#wget https://raw.githubusercontent.com/google/styleguide/gh-pages/intellij-java-google-style.xml
 #https://gerrit-review.googlesource.com/Documentation/dev-intellij.html
 
 #Lombok
