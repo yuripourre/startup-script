@@ -1,5 +1,5 @@
 # Install git
-sudo dnf -y install git
+sudo dnf -y install git meld
 
 # Create git directory
 mkdir ~/git
