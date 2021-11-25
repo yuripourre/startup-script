@@ -1,38 +1,38 @@
 # Install rpmfusion repos
-. rpm_fusion.sh
+sh rpm_fusion.sh
 
 # Dropbox
-. dropbox.sh
+sh dropbox.sh
 
 # Git
-. git.sh
+sh git.sh
 
 # Java
-. java.sh
+sh java.sh
 
 # Docker
-. docker.sh
+sh docker.sh
 
 # Ruby
-#. ruby.sh
+#sh ruby.sh
 # Heroku
-#. heroku.sh
+#sh heroku.sh
 
 # NVidia
 # Better way: https://fedoramagazine.org/install-nvidia-gpu/
-#. cuda.sh
+#sh cuda.sh
 
 # Install Adobe Flash
-. adobe_flash.sh
+sh adobe_flash.sh
 
 # Install codecs and VLC
-. multimedia.sh
+sh multimedia.sh
 
 # Custom keyboard shortcuts
-. hotkeys.sh
+sh hotkeys.sh
 
 # OpenGL
-. opengl.sh
+sh opengl.sh
 
 # Misc
-. misc.sh
+sh misc.sh
