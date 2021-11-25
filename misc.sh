@@ -12,8 +12,9 @@ sudo dnf install -y unar p7zip xdotool
 # Software to Auto Mount HDs
 sudo dnf -y install gnome-disk-utility
 
-# Do not update Kernel Packages (Avoid VirtualBox break)
-echo 'excludepkgs = kernel-*' | sudo tee --append /etc/dnf/dnf.conf
+# Do not update Kernel Packages (avoid VirtualBox breakage)
+EXCLUDE_PACKAGES="kernel-*"
+grep -qF "excludepkgs=$EXCLUDE_PACKAGES" /etc/dnf/dnf.conf  || echo "excludepkgs=$EXCLUDE_PACKAGES" | sudo tee --append /etc/dnf/dnf.conf
 
 # Disable PackageKit
 gsettings set org.gnome.software download-updates false
@@ -22,7 +23,7 @@ gsettings set org.gnome.software download-updates false
 sudo sed -i 's/#KeepCache=false/KeepCache=false/' /etc/PackageKit/PackageKit.conf
 
 # Disable lang files other than english
-echo '%_install_langs   en:en_US:en_US.UTF-8' | sudo tee -a /etc/rpm/macros.lang
+grep -qF '%_install_langs   en:en_US:en_US.UTF-8' /etc/rpm/macros.lang  || echo '%_install_langs   en:en_US:en_US.UTF-8' | sudo tee --append /etc/rpm/macros.lang
 
 # Create Empty File option
 touch ~/Templates/Empty\ File
@@ -36,6 +37,9 @@ gsettings set org.gnome.desktop.interface clock-show-seconds true
 
 # Prevent screen to lock
 gsettings set org.gnome.desktop.lockdown disable-lock-screen 'true'
+
+# Prevent closing lid to suspend
+sudo sed -i "/IgnoreLid=/c IgnoreLid=true" /etc/UPower/UPower.conf 
 
 # Change screenshots folder
 gsettings set "org.gnome.gnome-screenshot" "auto-save-directory" "~/Pictures"
