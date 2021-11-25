@@ -8,7 +8,7 @@
 #sudo systemctl start docker
 #sudo usermod -a -G docker $USER
 
-sudo dnf install moby-engine
+sudo dnf install -y moby-engine
 sudo systemctl enable --now docker
 sudo usermod -aG docker $(whoami)
 
