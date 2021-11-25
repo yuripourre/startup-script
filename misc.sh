@@ -16,15 +16,6 @@ sudo dnf -y install gnome-disk-utility
 EXCLUDE_PACKAGES="kernel-*"
 grep -qF "excludepkgs=$EXCLUDE_PACKAGES" /etc/dnf/dnf.conf  || echo "excludepkgs=$EXCLUDE_PACKAGES" | sudo tee --append /etc/dnf/dnf.conf
 
-# Disable PackageKit
-gsettings set org.gnome.software download-updates false
-
-# Disable PackageKit cache
-sudo sed -i 's/#KeepCache=false/KeepCache=false/' /etc/PackageKit/PackageKit.conf
-
-# Disable lang files other than english
-grep -qF '%_install_langs   en:en_US:en_US.UTF-8' /etc/rpm/macros.lang  || echo '%_install_langs   en:en_US:en_US.UTF-8' | sudo tee --append /etc/rpm/macros.lang
-
 # Create Empty File option
 touch ~/Templates/Empty\ File
 

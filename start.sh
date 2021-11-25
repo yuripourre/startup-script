@@ -36,3 +36,6 @@ sh opengl.sh
 
 # Misc
 sh misc.sh
+
+# Shrink
+sh shrink.sh
