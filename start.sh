@@ -39,3 +39,6 @@ sh misc.sh
 
 # Shrink
 sh shrink.sh
+
+# Shrink
+sh work.sh
