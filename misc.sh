@@ -25,9 +25,10 @@ touch ~/Templates/Empty\ File
 # Show Minimize and Maximize buttons
 gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 
-# Show day number and seconds
+# Show day of the week, number and seconds
 gsettings set org.gnome.desktop.interface clock-show-date true
 gsettings set org.gnome.desktop.interface clock-show-seconds true
+gsettings set org.gnome.desktop.interface clock-show-weekday true
 
 # Prevent screen to lock
 gsettings set org.gnome.desktop.lockdown disable-lock-screen 'true'
