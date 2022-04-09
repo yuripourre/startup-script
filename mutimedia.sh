@@ -6,3 +6,7 @@ sudo dnf -y install gstreamer-plugins-bad gstreamer-plugins-bad-nonfree gstreame
 
 # Video Player VLC
 sudo dnf -y install vlc
+
+# Audio
+sudo dnf -y install pavucontrol jack-audio-connection-kit-dbus
+#sudo dnf -y ardour
