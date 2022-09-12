@@ -9,7 +9,7 @@ sudo dnf -y install java-14-openjdk-devel
 
 # Download and install IntelliJ
 cd ~/
-wget -O idea-IC.tar.gz https://download.jetbrains.com/idea/ideaIC-2021.2.3.tar.gz
+wget -O idea-IC.tar.gz https://download.jetbrains.com/idea/ideaIC-2022.2.1.tar.gz
 tar -xvzf idea-IC.tar.gz
 rm idea-IC.tar.gz
 mv idea-IC* idea-IC
