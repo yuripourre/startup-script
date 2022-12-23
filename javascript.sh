@@ -4,3 +4,4 @@ source ~/.bashrc
 
 # Install latest NPM
 nvm install --lts
+nvm use lts
