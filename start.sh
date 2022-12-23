@@ -13,18 +13,6 @@ sh java.sh
 # Docker
 sh docker.sh
 
-# Ruby
-#sh ruby.sh
-# Heroku
-#sh heroku.sh
-
-# NVidia
-# Better way: https://fedoramagazine.org/install-nvidia-gpu/
-#sh cuda.sh
-
-# Install Adobe Flash
-sh adobe_flash.sh
-
 # Install codecs and VLC
 sh multimedia.sh
 
@@ -40,5 +28,25 @@ sh misc.sh
 # Shrink
 sh shrink.sh
 
-# Shrink
-sh work.sh
+# Wine (Should run at the end because requires manual intervention)
+sh wine.sh
+
+## Optional Scripts
+
+# Heroku
+#sh heroku.sh
+
+# NVidia
+# Better way: https://fedoramagazine.org/install-nvidia-gpu/
+#sh cuda.sh
+
+# Install Adobe Flash
+#sh adobe_flash.sh
+
+# Work
+# sh work.sh
+
+# Games
+
+## Quake 1
+# sh games/quake.sh

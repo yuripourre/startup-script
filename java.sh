@@ -18,6 +18,3 @@ cd -
 # Google Style
 #wget https://raw.githubusercontent.com/google/styleguide/gh-pages/intellij-java-google-style.xml
 #https://gerrit-review.googlesource.com/Documentation/dev-intellij.html
-
-#Lombok
-#https://projectlombok.org/setup/intellij
