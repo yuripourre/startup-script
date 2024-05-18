@@ -30,6 +30,8 @@ $SETTINGS/custom2/ binding "<Primary><Alt>I"
 # Open IntelliJ
 $SETTINGS/custom3/ name "Open IntelliJ"
 $SETTINGS/custom3/ command "sh idea-IC/bin/idea.sh"
+# Ultimate
+#$SETTINGS/custom3/ command "sh idea-IU/bin/idea.sh"
 $SETTINGS/custom3/ binding "<Primary>F9"
 
 # Open Adobe Fireworks

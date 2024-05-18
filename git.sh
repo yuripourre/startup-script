@@ -25,7 +25,7 @@ echo 'COLOR_CYAN="\[\033[0;36m\]"' >>~/.bashrc
 echo 'COLOR_LIGHT_CYAN="\[\033[1;36m\]"' >>~/.bashrc
 echo 'COLOR_GRAY="\[\033[0;37m\]"' >>~/.bashrc
 echo 'COLOR_WHITE="\[\033[1;37m\]"' >>~/.bashrc
-echo '## Custom colors'
+echo '## Custom colors' >>~/.bashrc
 echo 'COLOR_OCHRE="\[\033[38;5;95m\]"' >>~/.bashrc
 echo '' >>~/.bashrc
 echo 'function git_color {' >>~/.bashrc

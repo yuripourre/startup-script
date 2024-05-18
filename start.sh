@@ -1,6 +1,9 @@
 # Install rpmfusion repos
 sh rpm_fusion.sh
 
+# Setup OS in general
+sh extra.sh
+
 # Dropbox
 sh dropbox.sh
 
@@ -25,7 +28,7 @@ sh opengl.sh
 # Misc
 sh misc.sh
 
-# Shrink
+# Shrink Reduces the OS size
 sh shrink.sh
 
 # Wine (Should run at the end because requires manual intervention)
