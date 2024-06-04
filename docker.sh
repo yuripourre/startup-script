@@ -17,3 +17,11 @@ sudo usermod -aG docker $(whoami)
 
 # Docker Compose
 sudo dnf -y install docker-compose
+
+# Fix: dial unix /var/run/docker.sock: connect: permission denied.
+# Optional
+sudo groupadd docker
+sudo usermod -aG docker ${USER}
+
+sudo chmod 666 /var/run/docker.sock
+sudo systemctl restart docker
