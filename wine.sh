@@ -1,4 +1,4 @@
-sudo dnf install -y wine wine-common
+sudo dnf install -y wine-core wine-common wine-core.i686
 
 # Install winetricks
 wget  https://raw.githubusercontent.com/Winetricks/winetricks/master/src/winetricks
