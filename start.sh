@@ -1,3 +1,5 @@
+sh presetup.sh
+
 # Install rpmfusion repos
 sh rpm_fusion.sh
 

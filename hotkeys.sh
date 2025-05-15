@@ -28,10 +28,8 @@ $SETTINGS/custom2/ command "/usr/bin/firefox"
 $SETTINGS/custom2/ binding "<Primary><Alt>I"
 
 # Open IntelliJ
-$SETTINGS/custom3/ name "Open IntelliJ"
-$SETTINGS/custom3/ command "sh idea-IC/bin/idea.sh"
-# Ultimate
-#$SETTINGS/custom3/ command "sh idea-IU/bin/idea.sh"
+$SETTINGS/custom3/ name "Open Cursor"
+$SETTINGS/custom3/ command "./cursor/Cursor.AppImage"
 $SETTINGS/custom3/ binding "<Primary>F9"
 
 # Open Adobe Fireworks
@@ -44,15 +42,20 @@ $SETTINGS/custom5/ name "Open Android Studio"
 $SETTINGS/custom5/ command "sh android-studio/bin/studio.sh"
 $SETTINGS/custom5/ binding "<Primary>F10"
 
+# Open Text Editor
+$SETTINGS/custom6/ name "Open Text Editor"
+$SETTINGS/custom6/ command "/usr/bin/gnome-text-editor"
+$SETTINGS/custom6/ binding "<Primary><Alt>T"
+
 # Simulate Left Click (Ctrl + Single Quote)
-$SETTINGS/custom6/ name "Left Click"
-$SETTINGS/custom6/ command "xdotool click 1"
-$SETTINGS/custom6/ binding "<Control>apostrophe"
+$SETTINGS/custom7/ name "Left Click"
+$SETTINGS/custom7/ command "xdotool click 1"
+$SETTINGS/custom7/ binding "<Control>apostrophe"
 
 # Simulate Right Click (Ctrl + 1)
-$SETTINGS/custom7/ name "Right Click"
-$SETTINGS/custom7/ command "xdotool click 3"
-$SETTINGS/custom7/ binding "<Control>1"
+$SETTINGS/custom8/ name "Right Click"
+$SETTINGS/custom8/ command "xdotool click 3"
+$SETTINGS/custom8/ binding "<Control>1"
 
 # List all bindings
 # dconf dump /
