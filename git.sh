@@ -1,12 +1,9 @@
 # Install git
-sudo dnf -y install git meld
+sudo dnf -y install git
 
 # Create git directory
 mkdir ~/git
 
-COLOR_RESET="\[\033[00m\]"
-
-# Show branch in terminal
 echo '# Color list' >>~/.bashrc
 echo 'COLOR_RESET="\[\033[00m\]"' >>~/.bashrc
 echo 'COLOR_BLACK="\[\033[0;30m\]"' >>~/.bashrc
@@ -56,11 +53,12 @@ echo '    echo "($commit)"' >>~/.bashrc
 echo '  fi' >>~/.bashrc
 echo '}' >>~/.bashrc
 echo '' >>~/.bashrc
-echo 'PS1="[\u@\h \W"             # basename of pwd' >>~/.bashrc
-echo 'PS1+="$(git_color)"    # colors git status' >>~/.bashrc
-echo 'PS1+="\$(git_branch)"       # prints current branch' >>~/.bashrc
+echo 'PS1="[\u@\h \W"' >>~/.bashrc
+echo 'PS1+="$(git_color)"' >>~/.bashrc
+echo 'PS1+="\$(git_branch)"' >>~/.bashrc
 echo 'PS1+="$COLOR_RESET]$ "' >>~/.bashrc
 echo 'export PS1' >>~/.bashrc
+
 source ~/.bashrc
 
 # Github Credentials
