@@ -11,9 +11,13 @@ gsettings set org.gnome.desktop.interface clock-show-weekday true
 
 # Prevent screen to lock
 gsettings set org.gnome.desktop.lockdown disable-lock-screen 'true'
-
 # Prevent closing lid to suspend
 sudo sed -i "/IgnoreLid=/c IgnoreLid=true" /etc/UPower/UPower.conf
+
+# Fedora 39 and Over
+sudo sed -i "/HandleLidSwitch=/c HandleLidSwitch=ignore" /usr/lib/systemd/logind.conf
+sudo sed -i "/HandleLidSwitchExternalPower=/c HandleLidSwitchExternalPower=ignore" /usr/lib/systemd/logind.conf
+sudo sed -i "/HandleLidSwitchDocked=/c HandleLidSwitchDocked=ignore" /usr/lib/systemd/logind.conf
 
 # Change screenshots folder (Removed in newer Fedora versions)
 #gsettings set "org.gnome.gnome-screenshot" "auto-save-directory" "~/Pictures"
