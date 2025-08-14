@@ -10,7 +10,9 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings \
  '$KEY_PATH/custom4/', \
  '$KEY_PATH/custom5/', \
  '$KEY_PATH/custom6/', \
- '$KEY_PATH/custom7/']"
+ '$KEY_PATH/custom7/', \
+ '$KEY_PATH/custom8/', \
+ '$KEY_PATH/custom9/']"
 
 # Launch Terminal
 $SETTINGS/custom0/ name "Open Terminal"
@@ -50,12 +52,17 @@ $SETTINGS/custom6/ binding "<Primary><Alt>T"
 # Simulate Left Click (Ctrl + Single Quote)
 $SETTINGS/custom7/ name "Left Click"
 $SETTINGS/custom7/ command "xdotool click 1"
-$SETTINGS/custom7/ binding "<Control>apostrophe"
+$SETTINGS/custom7/ binding "<Primary>apostrophe"
 
 # Simulate Right Click (Ctrl + 1)
 $SETTINGS/custom8/ name "Right Click"
 $SETTINGS/custom8/ command "xdotool click 3"
-$SETTINGS/custom8/ binding "<Control>1"
+$SETTINGS/custom8/ binding "<Primary>1"
+
+# Open System Monitor (Ctrl + Alt + Del)
+$SETTINGS/custom9/ name "Open System Monitor"
+$SETTINGS/custom9/ command "gnome-system-monitor"
+$SETTINGS/custom9/ binding "<Primary><Alt>Delete"
 
 # List all bindings
 # dconf dump /
