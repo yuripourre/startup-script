@@ -85,12 +85,15 @@ sudo tee /etc/keyd/default.conf > /dev/null <<'EOF'
 [main]
 mouse1 = pageup
 mouse2 = pagedown
+volumeup = pageup
+volumedown = pagedown
+mute = f24
 f13 = C-c
 f14 = C-v
 f15 = C-S-v
 f16 = C-x
 
-[leftctrl]
+[leftcontrol]
 1 = leftmouse
 2 = middlemouse
 3 = rightmouse
