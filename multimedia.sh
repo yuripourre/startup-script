@@ -10,9 +10,3 @@ sudo dnf -y install vlc
 # Audio
 sudo dnf -y install pavucontrol jack-audio-connection-kit-dbus
 #sudo dnf -y ardour
-
-# Flatpak
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-
-# Install OBS Studio
-flatpak install flathub -y com.obsproject.Studio

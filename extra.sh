@@ -25,10 +25,6 @@ sudo sed -i "/HandleLidSwitchDocked=/c HandleLidSwitchDocked=ignore" /usr/lib/sy
 # Change recording time to 10 minutes (ctrl+alt+shift+r)  (Removed in newer Fedora versions)
 #gsettings set org.gnome.settings-daemon.plugins.media-keys max-screencast-length 600
 
-# Do not update Kernel Packages (avoid VirtualBox breakage)
-EXCLUDE_PACKAGES="kernel-*"
-grep -qF "excludepkgs=$EXCLUDE_PACKAGES" /etc/dnf/dnf.conf  || echo "excludepkgs=$EXCLUDE_PACKAGES" | sudo tee --append /etc/dnf/dnf.conf
-
 # Increase number of retained kernels to 8
 export RETAINED_KERNELS_CONFIG=installonly_limit
 export NUM_KERNELS=8

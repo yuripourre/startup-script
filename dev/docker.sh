@@ -25,3 +25,7 @@ sudo usermod -aG docker ${USER}
 
 sudo chmod 666 /var/run/docker.sock
 sudo systemctl restart docker
+
+# If you want to use VirtualBox, you need to exclude kernel packages from updates.
+EXCLUDE_PACKAGES="kernel-*"
+grep -qF "excludepkgs=$EXCLUDE_PACKAGES" /etc/dnf/dnf.conf  || echo "excludepkgs=$EXCLUDE_PACKAGES" | sudo tee --append /etc/dnf/dnf.conf

@@ -1,3 +1,8 @@
+# Git configuration variables
+# Accept command-line arguments
+GIT_USER_EMAIL="$1"
+GIT_USER_NAME="$2"
+
 # Install git
 sudo dnf -y install git
 
@@ -64,8 +69,8 @@ echo 'export PS1' >>~/.bashrc
 source ~/.bashrc
 
 # Github Credentials
-git config --global user.email "yuripourre@gmail.com"
-git config --global user.name "Yuri Pourre"
+git config --global user.email "$GIT_USER_EMAIL"
+git config --global user.name "$GIT_USER_NAME"
 
 # Github Tools
 git config --global core.editor "vi"
