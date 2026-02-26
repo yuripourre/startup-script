@@ -79,3 +79,4 @@ git config --global merge.tool meld
 # Git typos
 git config --global alias.statis status
 git config --global alias.stauts status
+git config --global alias.stauts status
