@@ -68,7 +68,7 @@ echo 'export PS1' >>~/.bashrc
 
 source ~/.bashrc
 
-# Github Credentials
+# Git Credentials
 git config --global user.email "$GIT_USER_EMAIL"
 git config --global user.name "$GIT_USER_NAME"
 
@@ -76,3 +76,6 @@ git config --global user.name "$GIT_USER_NAME"
 git config --global core.editor "vi"
 git config --global merge.tool meld
 
+# Git typos
+git config --global alias.statis status
+git config --global alias.stauts status
