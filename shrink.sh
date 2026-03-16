@@ -18,3 +18,5 @@ grep -qF '%_install_langs   en:en_US:en_US.UTF-8' /etc/rpm/macros.lang  || echo 
 #sudo sed -i "/^SystemMaxUse=/c SystemMaxUse=50M" /etc/systemd/journald.conf
 #sudo sed -i "/^#SystemMaxUse=/c SystemMaxUse=50M" /etc/systemd/journald.conf
 
+# Disable wsdd service
+sudo systemctl disable wsdd
