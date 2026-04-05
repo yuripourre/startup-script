@@ -10,7 +10,8 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings \
  '$KEY_PATH/custom4/', \
  '$KEY_PATH/custom5/', \
  '$KEY_PATH/custom6/', \
- '$KEY_PATH/custom7/']"
+ '$KEY_PATH/custom7/', \
+ '$KEY_PATH/custom8/']"
 
 # Launch Terminal
 $SETTINGS/custom0/ name "Open Terminal"
@@ -37,20 +38,25 @@ $SETTINGS/custom4/ name "Open System Monitor"
 $SETTINGS/custom4/ command "gnome-system-monitor"
 $SETTINGS/custom4/ binding "<Primary><Alt>Delete"
 
-# Open Cursor
-$SETTINGS/custom5/ name "Open Cursor"
-$SETTINGS/custom5/ command "./cursor/Cursor.AppImage"
-$SETTINGS/custom5/ binding "<Primary>F9"
+# Open AccuRig
+$SETTINGS/custom5/ name "Open AccuRig"
+$SETTINGS/custom5/ command "wine ~/.wine/drive_c/users/Public/Desktop/AccuRig.lnk"
+$SETTINGS/custom5/ binding "<Primary>F7"
 
 # Open Adobe Fireworks
 $SETTINGS/custom6/ name "Open Fireworks"
 $SETTINGS/custom6/ command "wine /opt/nonfree/fireworks/Fireworks.exe"
 $SETTINGS/custom6/ binding "<Primary>F8"
 
+# Open Cursor
+$SETTINGS/custom7/ name "Open Cursor"
+$SETTINGS/custom7/ command "./cursor/Cursor.AppImage"
+$SETTINGS/custom7/ binding "<Primary>F9"
+
 # Open Android Studio
-$SETTINGS/custom7/ name "Open Android Studio"
-$SETTINGS/custom7/ command "sh android-studio/bin/studio.sh"
-$SETTINGS/custom7/ binding "<Primary>F10"
+$SETTINGS/custom8/ name "Open Android Studio"
+$SETTINGS/custom8/ command "sh android-studio/bin/studio.sh"
+$SETTINGS/custom8/ binding "<Primary>F10"
 
 # List all bindings
 # dconf dump /
