@@ -77,6 +77,8 @@ git config --global core.editor "vi"
 git config --global merge.tool meld
 
 # Git typos
+git config --global alias.commity commit
+git config --global alias.ocmmit commit
 git config --global alias.statis status
 git config --global alias.stauts status
 git config --global alias.stauts status
