@@ -82,3 +82,6 @@ git config --global alias.ocmmit commit
 git config --global alias.statis status
 git config --global alias.stauts status
 git config --global alias.stauts status
+git config --global alias.puhs push
+git config --global alias.piush push
+git config --global alias.poush push
