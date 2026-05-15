@@ -30,4 +30,4 @@ export RETAINED_KERNELS_CONFIG=installonly_limit
 export NUM_KERNELS=8
 export DNF_CONFIG=/etc/dnf/dnf.conf
 
-sed -Ei "s/(installonly_limit=).*/\1$NUM_KERNELS/" /etc/dnf/dnf.conf
+sudo sed -Ei "s/(installonly_limit=).*/\1$NUM_KERNELS/" /etc/dnf/dnf.conf
