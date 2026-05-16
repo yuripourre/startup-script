@@ -8,4 +8,5 @@
 #sh hotkeys.sh
 sh start.sh
 
-sh dev/ollama.sh
+sh ai/ollama.sh
+#sh ai/comfyui.sh
