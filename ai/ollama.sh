@@ -35,6 +35,9 @@ RestartSec=3
 # Environment variables
 Environment="HOME=$DATA_DIR"
 Environment="OLLAMA_MODELS=$DATA_DIR/.ollama/models"
+# Make the server accessible from the internet
+# This is a security risk, but it is necessary for the server to be accessible from the internet
+Environment="OLLAMA_HOST=0.0.0.0"
 
 # Force use of NVIDIA GPU (ignores integrated AMD graphics)
 Environment="CUDA_VISIBLE_DEVICES=0"
