@@ -10,9 +10,9 @@ sh multimedia.sh
 # Dev Tools
 sh dev/git.sh yuripourre@gmail.com "Yuri Pourre"
 sh dev/gcc.sh
-sh dev/opengl.sh
-sh dev/cuda.sh
+sh dev/gpu.sh
 sh dev/keyd.sh
+#sh dev/opengl.sh
 #sh dev/java.sh
 #sh dev/javascript.sh
 #sh dev/docker.sh

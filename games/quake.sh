@@ -1,7 +1,10 @@
+# Install Wine
+sh ../wine.sh
+
 # Quakespasm
 wget http://sourceforge.net/projects/quakespasm/files/Linux/quakespasm-0.93.1_amd64.tar.gz/download -O quakespasm.tar.gz
 tar zvxf quakespasm.tar.gz
-sudo dnf install wine
+
 wget http://www.quakeone.com/q1files/downloads/quake-shareware-setup-beta099a.exe -O quake.exe
 wine quake.exe
 # Manual Action Required
