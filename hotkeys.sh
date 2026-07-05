@@ -50,7 +50,7 @@ $SETTINGS/custom6/ binding "<Primary>F8"
 
 # Open Cursor
 $SETTINGS/custom7/ name "Open Cursor"
-$SETTINGS/custom7/ command "./cursor/Cursor.AppImage"
+$SETTINGS/custom7/ command "./cursor/Cursor.AppImage --classic"
 $SETTINGS/custom7/ binding "<Primary>F9"
 
 # Open Android Studio
