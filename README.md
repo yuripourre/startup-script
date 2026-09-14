@@ -2,12 +2,19 @@
 Startup scripts based on Fedora
 
 ## How to use it
-From a fresh Fedora (Workstation) installation, type in your favorite command line:
+From a fresh Fedora (Workstation) installation, run:
 ```
-sh start.sh
+./start.sh
 ```
 
-## If you want to install the full version with dev tools
-```
-sh start_full.sh
-```
+An interactive checkbox menu lets you pick installation categories (Base OS, Dev, AI, Apps, Multimedia, Wine, and more) and then choose individual scripts within each category.
+
+- **Space** — toggle checkbox
+- **a** — select all
+- **n** — clear all
+- **Enter** — confirm
+- **q** — cancel
+
+Base OS is selected by default so a plain Enter on the first screen matches the original basic setup.
+
+**Note:** Run with bash (`./start.sh`), not `sh start.sh`.
