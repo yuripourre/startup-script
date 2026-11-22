@@ -12,12 +12,21 @@ gsettings set org.gnome.desktop.interface clock-show-weekday true
 # Prevent screen to lock
 gsettings set org.gnome.desktop.lockdown disable-lock-screen 'true'
 # Prevent closing lid to suspend
-sudo sed -i "/IgnoreLid=/c IgnoreLid=true" /etc/UPower/UPower.conf
+if [ -f /etc/UPower/UPower.conf ]; then
+    sudo sed -i "/IgnoreLid=/c IgnoreLid=true" /etc/UPower/UPower.conf
+fi
 
-# Fedora 39 and Over
-sudo sed -i "/HandleLidSwitch=/c HandleLidSwitch=ignore" /usr/lib/systemd/logind.conf
-sudo sed -i "/HandleLidSwitchExternalPower=/c HandleLidSwitchExternalPower=ignore" /usr/lib/systemd/logind.conf
-sudo sed -i "/HandleLidSwitchDocked=/c HandleLidSwitchDocked=ignore" /usr/lib/systemd/logind.conf
+# Use a logind drop-in (survives systemd updates and works regardless of
+# where the distro ships the default logind.conf)
+sudo mkdir -p /etc/systemd/logind.conf.d
+sudo tee /etc/systemd/logind.conf.d/90-ignore-lid.conf > /dev/null << 'EOF'
+[Login]
+HandleLidSwitch=ignore
+HandleLidSwitchExternalPower=ignore
+HandleLidSwitchDocked=ignore
+EOF
+# Apply without reboot (SIGHUP reloads config, does not end sessions)
+sudo systemctl kill -s HUP systemd-logind
 
 # Change screenshots folder (Removed in newer Fedora versions)
 #gsettings set "org.gnome.gnome-screenshot" "auto-save-directory" "~/Pictures"
