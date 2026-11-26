@@ -15,7 +15,7 @@ gsettings set org.gnome.settings-daemon.plugins.media-keys custom-keybindings \
 
 # Launch Terminal
 $SETTINGS/custom0/ name "Open Terminal"
-$SETTINGS/custom0/ command "gnome-terminal"
+$SETTINGS/custom0/ command "ptyxis"
 $SETTINGS/custom0/ binding "<Primary>F2"
 
 # Open up file manager
@@ -54,9 +54,9 @@ $SETTINGS/custom7/ command "./cursor/Cursor.AppImage --classic"
 $SETTINGS/custom7/ binding "<Primary>F9"
 
 # Open Android Studio
-$SETTINGS/custom8/ name "Open Android Studio"
-$SETTINGS/custom8/ command "sh android-studio/bin/studio.sh"
-$SETTINGS/custom8/ binding "<Primary>F10"
+#$SETTINGS/custom8/ name "Open Android Studio"
+#$SETTINGS/custom8/ command "sh android-studio/bin/studio.sh"
+#$SETTINGS/custom8/ binding "<Primary>F10"
 
 # List all bindings
 # dconf dump /
