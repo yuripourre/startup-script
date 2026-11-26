@@ -17,7 +17,6 @@ CATALOG_CATEGORIES=(
 # Script definitions: id|category|path|label|default_on
 # Order in this array is execution order.
 CATALOG_SCRIPTS=(
-    "presetup|base_os|os/presetup.sh|Presetup (gnome-terminal)|1"
     "extra|base_os|os/extra.sh|OS tweaks (GNOME, lid, kernels)|1"
     "shrink|base_os|os/shrink.sh|Shrink OS (remove bloat)|1"
     "hotkeys|base_os|os/hotkeys.sh|Custom keyboard shortcuts|1"

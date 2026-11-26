@@ -170,11 +170,23 @@ main() {
         exit 0
     fi
 
+    local failed=()
     for run_id in "${ordered[@]}"; do
-        run_script "$run_id"
+        if ! run_script "$run_id"; then
+            failed+=("$(catalog_get_script_path "$run_id")")
+            echo "!! $(catalog_get_script_path "$run_id") exited with an error, continuing."
+        fi
     done
 
     echo ""
+    if ((${#failed[@]} > 0)); then
+        echo "Installation finished with errors in:"
+        local f
+        for f in "${failed[@]}"; do
+            echo "  - $f"
+        done
+        exit 1
+    fi
     echo "Installation complete."
 }
 
